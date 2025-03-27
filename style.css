@@ -1,22 +1,24 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #f8f9fa;
     margin: 0;
-    padding: 0;
+    padding: 20px;
 }
 
 .container {
-    width: 50%;
-    margin: 50px auto;
-    background: #fff;
+    max-width: 600px;
+    margin: auto;
+    background: white;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     text-align: center;
-    color: #333;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 form {
@@ -31,33 +33,33 @@ label {
 
 input, textarea {
     width: 100%;
-    padding: 8px;
-    margin-top: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 14px;
+    display: block;  /* Ensure inputs appear below labels */
 }
 
 button {
-    margin-top: 15px;
-    background-color: #007bff;
+    width: 100%;
+    background: #007bff;
     color: white;
     padding: 10px;
+    font-size: 16px;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
     cursor: pointer;
-    transition: 0.3s;
+    margin-top: 10px;
 }
 
 button:hover {
-    background-color: #212668;
+    background: #0056b3;
 }
 
-#resumeOutput {
+#resume-output {
     margin-top: 20px;
-    padding: 20px;
-    border-radius: 8px;
+    padding: 15px;
     background: #eef;
-    font-size: 16px;
+    border-radius: 5px;
 }
