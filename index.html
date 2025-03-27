@@ -3,16 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume Builder</title>
+    <title>RESUME BUILDER</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> <!-- Include jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script> 
 </head>
 <body>
     <div class="container">
-        <h1>Resume Builder</h1>
+        <h1><u>RESUME BUILDER</u></h1>
         <form id="resume-form">
             <label for="name">Full Name:</label>
             <input type="text" id="name" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required>
+
+            <label for="linkedin">LinkedIn Profile:</label>
+            <input type="url" id="linkedin">
 
             <label for="summary">Summary (4-line intro):</label>
             <textarea id="summary" rows="4" required></textarea>
@@ -23,19 +36,44 @@
             <label for="projects">Projects:</label>
             <textarea id="projects" rows="4" required></textarea>
 
-            <label for="skills">Skills (Technical & Soft Skills):</label>
-            <textarea id="skills" rows="4" required></textarea>
+            <!-- Skills Section with Two Columns -->
+            <div class="skills-container">
+                <div>
+                    <label for="soft-skills">Soft Skills:</label>
+                    <textarea id="soft-skills" rows="4" required></textarea>
+                </div>
+                <div>
+                    <label for="technical-skills">Technical Skills:</label>
+                    <textarea id="technical-skills" rows="4" required></textarea>
+                </div>
+            </div>
 
-            <label for="education">Education:</label>
-            <textarea id="education" rows="4" required></textarea>
+            <!-- Dynamic Education Section -->
+            <label>Education:</label>
+            <div id="education-section">
+                <div class="education-entry">
+                    <input type="text" class="institution" placeholder="Institution Name" required>
+                    <input type="text" class="board" placeholder="Board/University" required>
+                    <input type="text" class="degree" placeholder="Class/Degree" required>
+                    <input type="text" class="year" placeholder="Passout Year" required>
+                </div>
+            </div>
+            <button type="button" onclick="addEducation()">+ Add Education</button>
 
-            <label for="additional-info">Additional Info (Languages, Interests):</label>
-            <textarea id="additional-info" rows="4"></textarea>
+            <!-- Additional Information Section -->
+            <label>Additional Information:</label>
+            <div class="additional-info">
+                <label for="languages">Languages Known:</label>
+                <input type="text" id="languages" placeholder="e.g., English, Hindi, French">
+
+                <label for="hobbies">Hobbies & Interests:</label>
+                <input type="text" id="hobbies" placeholder="e.g., Reading, Traveling, Coding">
+            </div>
 
             <button type="button" onclick="generateResume()">Generate Resume</button>
         </form>
 
-        <div id="resume-output"></div> <!-- Keep one div for output -->
+        <div id="resume-output"></div> 
         <button id="download-pdf" style="display: none;" onclick="downloadPDF()">Download PDF</button>
     </div>
 
