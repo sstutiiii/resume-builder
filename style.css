@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    background-color: #cdecfaa0;
     margin: 0;
     padding: 20px;
 }
@@ -57,9 +57,46 @@ button:hover {
     background: #0056b3;
 }
 
-#resume-output {
-    margin-top: 20px;
-    padding: 15px;
-    background: #eef;
-    border-radius: 5px;
+#resume-content {
+    width: 210mm;
+    min-height: 297mm; /* A4 height */
+    margin: 0 auto;
+    padding: 20mm; /* Standard print margins */
+    box-sizing: border-box;
+    background-color: white;
+    color: #333; /* Your text color */
+    font-family: Arial, sans-serif; /* Use web-safe fonts */
 }
+
+#download-pdf {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#download-pdf:hover {
+    background-color: darkgreen;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;  
+    margin-bottom: 15px;
+    border: 2px solid #ccc; /* Fixed border thickness */
+    border-radius: 5px;  /* Rounded corners */
+    font-size: 14px;
+    display: block;
+    box-sizing: border-box; /* Prevents elements from growing */
+    resize: none; /* Prevents resizing of textareas */
+    outline: none; /* Removes blue outline on focus */
+}
+
+input:focus, textarea:focus {
+    border-color: #007bff; /* Changes border color on focus */
+}
+
