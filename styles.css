@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fc;
+    color: #1d1d1f;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.account-btn {
+    padding: 10px 20px;
+    background: white;
+    border: 2px solid #1d1d1f;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.content {
+    max-width: 500px;
+}
+
+h3 {
+    color: #001aff;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 16px;
+    color: #4a4a4a;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.yellow-btn, .blue-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    border: none;
+}
+
+.yellow-btn {
+    background: #fbbc05;
+    color: black;
+    margin-right: 10px;
+}
+
+.blue-btn {
+    background: white;
+    border: 2px solid #001aff;
+    color: #001aff;
+}
+
+.resume-preview img {
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
