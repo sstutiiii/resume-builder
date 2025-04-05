@@ -9,27 +9,36 @@
 <body>
     <nav>
         <div class="logo">HireReady</div>
-        <a href="index.html.html" class="home-btn">Home</a>
+        <a href="index.html" class="home-btn">Home</a>
     </nav>
 
     <section class="account-container">
         <div class="account-card">
             <h2>Create Your Account</h2>
-            <form>
+            <form method="POST" action="/users/signup/">
+                {% csrf_token %}
+                
                 <label for="name"><b>Full Name</b></label>
-                <input type="text" id="name" placeholder="Enter your name" required>
+                <input type="text" id="name" name="username" placeholder="Enter your name" required>
 
                 <label for="email"><b>Email</b></label>
-                <input type="email" id="email" placeholder="Enter your email" required>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
                 <label for="password"><b>Password</b></label>
-                <input type="password" id="password" placeholder="Create a password" required>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+
+                <label for="confirm_password"><b>Confirm Password</b></label>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required>
 
                 <button type="submit">Sign Up</button>
             </form>
+
+            {% if error %}
+                <p style="color: red;">{{ error }}</p>
+            {% endif %}
         </div>
     </section>
-    <script src="account js.js"></script>
 
+    <script src="account js.js"></script>
 </body>
 </html>
